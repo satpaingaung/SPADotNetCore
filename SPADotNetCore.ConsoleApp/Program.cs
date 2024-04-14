@@ -1,4 +1,5 @@
 ﻿
+using SPADotNetCore.ConsoleApp;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -9,7 +10,7 @@ Console.WriteLine("Hello, World!");
 
 
 
-//DB Connection String Builder
+/*//DB Connection String Builder
 SqlConnectionStringBuilder DBConnectionStringBuilder = new SqlConnectionStringBuilder();
 DBConnectionStringBuilder.DataSource = "MDYLPT-0001"; //database servername
 DBConnectionStringBuilder.InitialCatalog = "SPADotNetCoreDB"; //database name
@@ -36,6 +37,12 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("Blog Author =>" + dr["BlogAuthor"]);
     Console.WriteLine("Blog Content =>" + dr["BlogContent"]);
     Console.WriteLine("--------------------------");
-}
+}*/
 
-Console.ReadKey();
+
+//CRUD 
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+
+adoDotNetExample.create("title","author","content");
+adoDotNetExample.read();
+Console.ReadLine();
