@@ -43,6 +43,10 @@ foreach (DataRow dr in dt.Rows)
 //CRUD 
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
-adoDotNetExample.create("title","author","content");
+//adoDotNetExample.create("title","author","content");
+adoDotNetExample.update(13, "test Title 1", "test author", "test content");
+//adoDotNetExample.delete(12);
 adoDotNetExample.read();
+//adoDotNetExample.editedstatus(12);
+adoDotNetExample.editedstatus(13);
 Console.ReadLine();
